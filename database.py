@@ -2,7 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-URL_DATABASE = 'postgresql://postgres:123456@localhost:5432/membership_db'
+URL_DATABASE = "postgresql://neondb_owner:npg_sC7UIqw4ehpz@ep-long-smoke-a1i6sv9g-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+
 
 engine = create_engine(URL_DATABASE)
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
