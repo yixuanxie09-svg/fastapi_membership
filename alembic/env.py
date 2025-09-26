@@ -8,14 +8,14 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 # 匯入專案內的設定
-from database import URL_DATABASE
+from database import DATABASE_URL
 from models import Base
 
 # Alembic Config 物件
 config = context.config
 
 # 設定 sqlalchemy.url，覆蓋 alembic.ini 裡的空值
-config.set_main_option("sqlalchemy.url", URL_DATABASE)
+config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 # Logging 設定
 if config.config_file_name is not None:
